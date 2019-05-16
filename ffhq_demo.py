@@ -14,7 +14,7 @@ pretrained_model = "https://github.com/yu4u/age-gender-estimation/releases/downl
 modhash = 'fbe63257a054c1c5466cfd7bf14646d6'
 
 # read the json file 
-with open('/home/hao66/project/UP-GAN/datasets/data/ffhq-dataset-v1.json', 'r') as file: 
+with open('/data/hao66/project/data/ffhq-dataset-v1.json', 'r') as file: 
     data = json.load(file) 
 
 def get_args():
@@ -29,7 +29,7 @@ def get_args():
                         help="width of network")
     parser.add_argument("--margin", type=float, default=0.5,
                         help="margin around detected face for age-gender estimation")
-    parser.add_argument("--image_dir", type=str, default="/home/hao66/project/UP-GAN/datasets/data/thumbnails128x128/",
+    parser.add_argument("--image_dir", type=str, default="/data/hao66/project/data/thumbnails128x128/",
                         help="target image directory; if set, images in image_dir are used instead of webcam")
     args = parser.parse_args()
     return args
